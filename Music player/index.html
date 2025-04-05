@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amarante&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="music-player">
+            <div class="nav">
+                <div class="circle sidebar-icon" title="Playlist">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="img">
+                <img src="/Data/cover.jpg" alt="CoverPhoto">
+            </div>
+
+            <div class="detail">
+                <h2 class="title">Feel it</h2>
+                <h3 class="artist">D4vd</h2>
+            </div>
+
+            <audio>
+                <source src="Data/Feel it.mp3" type="audio/mp3">
+            </audio>
+            <input type="range" value="0" class="progress">
+
+            <div class="controls">
+                <i class="fa-solid fa-angles-left prev"></i>
+                <i class="fa-solid fa-play play"></i>
+                <i class="fa-solid fa-angles-right next"></i>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <p class="title">Playlist</p>
+            <div class="song-list">
+                <div class="box">
+                    <img src="/Data/cover.jpg" alt="Feel it">
+                    <p class="song-name">Feel It</p>
+                </div>
+                <div class="box">
+                    <img src="/Data/cover02.jpg" alt="Feel it">
+                    <p class="song-name">New Drop</p>
+                </div>
+                <div class="box">
+                    <img src="/Data/cover03.jpg" alt="Feel it">
+                    <p class="song-name">Aarzu</p>
+                </div>
+                <div class="box">
+                    <img src="/Data/cover04.jpg" alt="Feel it">
+                    <p class="song-name">Sunflower</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

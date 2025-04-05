@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}  
+body{
+    background-color: #9e2a2b;    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.music-player{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5vmin;
+    letter-spacing: .5vmin;
+    background-color: #fff3b0;
+    height: 72vh;
+    width: 25vw;
+    border-radius: 5vmin;
+    z-index: 2; /* Set a higher z-index than the sidebar */
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 2vmin;
+}
+.nav i{
+    color: #540b0e;
+    padding: 2vmin;
+    cursor: pointer;
+}
+.circle{
+    margin-left: auto;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+}
+.img{
+    width: 40vmin;
+    height: 40vmin;
+    margin: auto;
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5vmin;
+}
+.detail{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1vmin;
+}
+.detail h2,h3{
+    margin: auto;
+}
+.progress{
+    -webkit-appearance: none;
+    display: block;
+    margin: 1vmin auto; 
+    width: 85%;
+    height: 1vmin;
+    cursor: grab;
+    background: #669bbc;
+    border-radius: 1vmin;
+}
+.progress::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 3vmin;
+    height: 3vmin;
+    background-color: #003049;
+    border: 3px solid #00b4d8;
+    border-radius: 50%;
+}
+.controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+.controls i{
+    padding: 2.5vmin;
+    border-radius: 50%;
+    border: none;
+    background-color: #540b0e;
+    color: #fff;
+    cursor: pointer;
+}
+.controls .play{
+    padding: 3.5vmin;
+    font-size: 2.5vmin;
+}
+.controls i:hover{
+    background-color: #fff;
+    color:  black;
+}
+.sidebar{
+    display: none;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    text-align: center;
+    line-height: 5vmin;
+    height: 72vh;
+    width: 25vw;
+    border-top-right-radius: 8vmin;
+    border-bottom-right-radius: 8vmin;
+    position: relative;
+    right: 4vmin;
+    z-index: 1;
+    transform-origin: right center;
+}
+.show{
+    display: block;
+    animation: slideSidebar 0.3s forwards;
+}
+.sidebar .title{
+    font-size: 4vmin;
+    font-weight: bold;
+    letter-spacing: 1vmin;
+    text-decoration:underline;
+       
+}
+.sidebar .song-name{
+    font-size: 2.5vmin;
+    font-family: 'Amarante', cursive;
+    font-weight:100;
+}
+.sidebar .song-list{
+    display: flex;
+    flex-direction: column;
+    height: 15vmin;
+    width: 100%;
+}
+.sidebar .box{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    border-bottom: .1vmin solid rgba(211, 211, 211, .7);
+    cursor: pointer;
+}
+.sidebar .box img{
+    width: 15vmin;
+    height: 15vmin;
+    object-fit: contain;
+    padding: 1vmin 0;
+}
+.sidebar .box:hover{
+    background: rgba(211, 211, 211, .5);
+}
+
+@keyframes slideSidebar {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+}
+
+@media only screen and (max-width:450px){
+    .img {
+        width: 25vmin;
+        height: 25vmin;
+    }
+    .music-player {
+        font-size: 1vmin;
+        height: 32vh;
+        width: 35vw;
+    }
+    .sidebar{
+        height: 32vh;
+        width: 35vw;
+    }
+    .sidebar .box{
+        height: 10vmin;
+    }
+    .sidebar .box img {
+        width: 10vmin;
+        height: 10vmin;
+    }
+}
