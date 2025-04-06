@@ -1,4 +1,4 @@
-apiKey="7934a1058d53a2d1ab0b66d9d5993107";
+apiKey=;//API key here 
 
 const  weatherForm=document.querySelector("form");
 const result= document.querySelector(".result");
