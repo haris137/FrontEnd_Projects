@@ -1,0 +1,122 @@
+.plotubot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+    height: 8vmin;
+    width: 8vmin;
+    z-index: 5;
+    position: fixed;
+    right: 3vmin;
+    bottom: 5vmin;
+    transition: all 0.2s ease;
+}
+.plotubot:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+.plotubot.moved{
+    right: 1vmin; 
+    bottom: 1vmin;
+    height: 7vmin;
+    width: 7vmin;
+}
+.plotubot img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.chat {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: hsl(0 0% 100% / 1);
+    height: 70vmin;
+    width: 60vmin;
+    position: fixed;
+    right: 3vmin;
+    bottom: 5vmin;
+    z-index: 2;
+    border-radius: 5vmin;
+    opacity: .95;
+    padding: 2vmin;
+    flex-direction: column;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+.prompt{
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color:  hsl(0, 0%, 85%) transparent;
+}
+.ai-msg{
+    max-width: 80%;
+    background-color: hsl(0, 0%, 85%);
+    font-size: 2vmin;
+    color: black;
+    border-radius: 1vmin 1vmin 1vmin 0;
+    padding: 1vmin;
+    margin: .5vmin 0;
+    align-self: flex-start;
+    word-wrap: break-word;
+}
+.user-msg{
+    max-width: 80%;
+    background-color: hsl(0, 0%, 5%);
+    font-size: 2vmin;
+    color: white;
+    border-radius: 1vmin 1vmin 0 1vmin;
+    padding: 1vmin;
+    margin: .5vmin 0;
+    align-self: flex-end;
+    word-wrap: break-word;
+}
+.inpt {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 1.5vmin;
+    outline: 2px solid hsl(0, 0%, 30%);
+    border-radius: 5vmin;
+    width: 100%;
+}
+.inpt-prmpt {
+    width: 100%;
+    height: 5vmin;
+    border-radius: 10vmin;
+    padding: 1rem;
+    font-size: 2vmin;
+    color: black;
+    outline: none;
+    border: none;
+    background: none;
+}
+.inpt-prmpt:focus{
+    outline: none;
+    border: none;
+}
+.submit-prmpt {
+    display: none;
+    font-size: 2vmin;
+    color: white;
+    width: 4vmin;
+    height: 4vmin;
+    background-color: hsl(0, 0%, 0%);
+    border: transparent;
+    border-radius: 50%;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    margin-right: .5vmin;
+}
+.submit-prmpt:hover{
+    background-color: hsl(0, 0%, 10%);
+}
+.inpt .inpt-prmpt:valid~button{
+    display: block;
+}
